@@ -16,7 +16,7 @@ const TripPlanner = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/plan-trip', {
+      const response = await axios.post('https://travel-planner-frontend-i2nowgd3z-sujith-kallutlas-projects.vercel.app/', {
         destination,
         dates,
       });

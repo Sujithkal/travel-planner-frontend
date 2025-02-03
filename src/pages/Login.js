@@ -17,7 +17,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/login', {
+      const response = await axios.post('https://travel-planner-frontend-i2nowgd3z-sujith-kallutlas-projects.vercel.app/', {
         username,
         password,
       });
