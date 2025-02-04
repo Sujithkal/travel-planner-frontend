@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       // ✅ Use the Render Backend URL instead of localhost
-      const response = await axios.post('https://travel-planner-backend-ztp5.onrender.com/login', {
+      const response = await axios.post('https://travel-planner-backend-ztp5.onrender.com/', {
         username,
         password,
       });
