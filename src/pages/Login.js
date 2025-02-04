@@ -12,12 +12,13 @@ const Login = () => {
     e.preventDefault();
 
     if (!username || !password) {
-      setErrorMessage('Please enter both username and password');
+      setErrorMessage('❌ Please enter both username and password');
       return;
     }
 
     try {
-      const response = await axios.post('https://travel-planner-backend-ztp5.onrender.com/', {
+      // ✅ Use the Render Backend URL instead of localhost
+      const response = await axios.post('https://travel-planner-backend-ztp5.onrender.com/login', {
         username,
         password,
       });
@@ -26,7 +27,7 @@ const Login = () => {
       setErrorMessage('');
     } catch (error) {
       setSuccessMessage('');
-      setErrorMessage(error.response?.data?.message || 'Something went wrong');
+      setErrorMessage(error.response?.data?.message || '❌ Something went wrong');
     }
   };
 
